@@ -10,4 +10,4 @@ For instructions see [https://github.com/yearn/tokenized-strategy](https://githu
 
 ## Strategy
 
-This strategy swaps the allocated funds for CBBTC (Coinbase BTC) through Uniswap V3. It uses a Chainlink oracle to check for deviations from the current BTC market price when performing swaps and reports as a safeguard.
+This strategy transfers funds from the vault to an external (human) asset manager. It requires trust in a single entity and is not safe for any professional asset management.
