@@ -1,0 +1,38 @@
+[profile.default]
+auto_detect_solc = false
+bytecode_hash = "none"
+evm_version = "shanghai"
+fuzz = { runs = 100, seed = "0xd13f0bfb" }
+fuzz_max_global_rejects = 100_000_000
+gas_reports = ["*"]
+optimizer = true
+optimizer_runs = 200
+solc = "0.8.25"
+src = "src"
+out = "out"
+test = "test"
+libs = ["lib"]
+script = "script"
+libraries = [
+    "lib/swap-helpers/src/utils/Slippage.sol:Slippage:0xfc2377f022654cbd4103b8a1a5437c50c0f1c7cf",
+]
+
+[etherscan]
+mainnet = { key = "${ETHERSCAN_API_KEY}" }
+
+
+[rpc_endpoints]
+mainnet = "${ETH_RPC_URL}"
+
+
+[fmt]
+bracket_spacing = true
+int_types = "long"
+line_length = 120
+multiline_func_header = "all"
+number_underscore = "thousands"
+quote_style = "double"
+tab_width = 4
+wrap_comments = true
+
+# See more config options https://github.com/foundry-rs/foundry/tree/master/config
